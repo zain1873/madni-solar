@@ -237,9 +237,11 @@
     justify-content: center;
   }
 
-  .ticker-track-wrapper {
-    width: 100%;
-  }
+ .ticker-track-wrapper {
+  width: 100%;
+  flex: none;        /* was: flex: 1 (basis 0% collapses height when wrapped) */
+  min-height: 46px;  /* new: guarantees it's visible even with no content height */
+}
 
   .hero-buttons {
     flex-wrap: wrap;

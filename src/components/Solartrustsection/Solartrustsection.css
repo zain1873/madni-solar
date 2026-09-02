@@ -87,3 +87,12 @@
   outline: 2px solid #ffb648;
   outline-offset: 3px;
 }
+
+@media (max-width: 350px) {
+  .stst-disc {
+    max-width: 300px;
+  }
+  .stst-orb {
+    width: 230px;
+  }
+}

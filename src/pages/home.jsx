@@ -10,6 +10,7 @@ import StatsCards from '../components/Statscards/Statscards'
 import EquipmentTrading from '../components/Equipments/Equipmenttrading'
 import SolarServices from '../components/Solarservices/Solarservices'
 import Faq from '../components/Faq/Faq'
+import MeetOurTeam from '../components/Meetourteam/Meetourteam'
 
 function home() {
   return (
@@ -22,6 +23,7 @@ function home() {
       <SolarServices/>
       <SolarTrustSection/>
       <Testimonials/>
+      <MeetOurTeam/>
       <Faq/>
       <ContactInfoBar/>
       <Footer/>

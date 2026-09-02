@@ -116,7 +116,7 @@ export default function SolarTrustSection() {
             — Verified SunSolar customer
           </p>
 
-          <div className="flex items-center gap-4.5 mt-1">
+          <div className="flex items-center gap-3 mt-1">
             <div className="font-sora font-bold text-2xl text-[#f6f2ea] border border-white/[0.16] rounded-xl px-5 py-3.5 bg-[#1a1512]">
               4.9/5
             </div>
