@@ -139,7 +139,7 @@
 
 /* Highlight the active/hovered item like "Solar Panels" in screenshot */
 .has-dropdown:hover .nav-link {
-  color: #1d4ed8;
+  color: var(--navy);
 }
 
 /* ===== Simple Dropdown (About) ===== */
@@ -147,7 +147,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--gray-light);
+  background-color: #fff;
   list-style: none;
   /* margin: 8px 0 0 0; */
   min-width: 200px;
@@ -173,7 +173,7 @@
 
 .dropdown-wide {
   min-width: 480px;
-  background-color: var(--navy);
+  background-color: #fff;
   padding: 20px;
 }
 
@@ -184,7 +184,7 @@
 }
 
 .dropdown-wide li a {
-  color: var(--white);
+  color: var(--theme-color);
   padding: 6px 0;
   display: inline-flex;
   align-items: center;
@@ -194,6 +194,7 @@
 .dropdown-wide li a:hover {
   background-color: transparent;
   text-decoration: underline;
+  color: var(--theme-color) !important;
 }
 
 .bullet-icon {
@@ -219,7 +220,7 @@
   top: 100%;
   left: -130%;
   /* transform: translateX(-50%); */
-  background-color: var(--navy);
+  background-color: #fff;
   padding: 30px;
   min-width: 900px;
   max-width: 1100px;
@@ -285,7 +286,7 @@
 }
 
 .mega-item a {
-  color: var(--white);
+  color: var(--theme-color);
   text-decoration: none;
   font-size: 13.5px;
   display: inline-flex;
@@ -295,7 +296,7 @@
 }
 
 .mega-sublist .mega-item a {
-  color: rgba(255, 255, 255, 0.85);
+  /* color: rgba(255, 255, 255, 0.85); */
   font-size: 13px;
 }
 
