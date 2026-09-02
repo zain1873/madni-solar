@@ -1,0 +1,132 @@
+/* ===== Section wrapper ===== */
+.stats-section {
+  background: linear-gradient(180deg, #f4f6f9 0%, #eef1f5 100%);
+  padding: 80px 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* ===== Grid layout ===== */
+.stats-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+/* ===== Card ===== */
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 60px 26px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(20, 30, 60, 0.06);
+  border: 1px solid #eef0f3;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* Top accent bar that grows in on hover */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--theme-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  border-color: transparent;
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ===== Icon circle ===== */
+.stat-icon-wrapper {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 24px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-color);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stat-card:hover .stat-icon-wrapper {
+  transform: scale(1.1) rotate(-6deg);
+  box-shadow: 0 14px 28px rgba(48, 126, 191, 0.4);
+}
+
+.stat-icon {
+  color: #ffffff;
+  font-size: 32px;
+  display: flex;
+}
+
+/* ===== Text ===== */
+.stat-value {
+  color: #0f2440;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  margin: 0 0 8px 0;
+}
+
+.stat-label {
+  color: #7a8494;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ===== Responsive design (media queries only) ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-section {
+    padding: 60px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .stat-card {
+    padding: 42px 20px;
+  }
+
+  .stat-icon-wrapper {
+    width: 76px;
+    height: 76px;
+  }
+
+  .stat-icon {
+    font-size: 26px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+  .stats-section {
+    padding: 45px 0;
+  }
+}

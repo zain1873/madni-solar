@@ -58,7 +58,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background: var(--orange-dark);
+  background: var(--theme-color);
   margin: 16px auto 0 auto;
   border-radius: 2px;
 }
@@ -170,7 +170,7 @@
 
 .testimonial-role {
   font-size: 14px;
-  color: var(--orange-dark);
+  color: var(--theme-color);
   font-weight: 600;
   margin: 4px 0 0 0;
 }

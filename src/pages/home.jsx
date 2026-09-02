@@ -6,15 +6,23 @@ import HeroBanner from '../components/Herobanner/Herobanner'
 import AboutCompany from '../components/Aboutcompany/Aboutcompany'
 import Testimonials from '../components/Testimonials/Testimonials'
 import SolarTrustSection from '../components/Solartrustsection/Solartrustsection'
+import StatsCards from '../components/Statscards/Statscards'
+import EquipmentTrading from '../components/Equipments/Equipmenttrading'
+import SolarServices from '../components/Solarservices/Solarservices'
+import Faq from '../components/Faq/Faq'
 
 function home() {
   return (
     <div>
       <Navbar/>
       <HeroBanner/>
-      {/* <AboutCompany/> */}
-      {/* <SolarTrustSection/> */}
+      <AboutCompany/>
+      <StatsCards/>
+      <EquipmentTrading/>
+      <SolarServices/>
+      <SolarTrustSection/>
       <Testimonials/>
+      <Faq/>
       <ContactInfoBar/>
       <Footer/>
       
