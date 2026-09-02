@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Page background: warm near-black with two soft solar glows */
+.stst-bg {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0c0a;
+  background-image:
+    radial-gradient(ellipse 900px 500px at 18% 15%, rgba(255, 122, 41, 0.10), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 85% 80%, rgba(255, 122, 41, 0.05), transparent 60%);
+  color: #f6f2ea;
+}
+.penel {
+  background-color: var(--theme-color);
+  color: #fff;
+
+}
+.leading-none  {
+  color: #fff;
+}
+
+/* Outer rings behind the stat orbs */
+.stst-disc {
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 122, 41, 0.08),
+    rgba(255, 255, 255, 0.015) 55%,
+    transparent 75%
+  );
+}
+
+/* Stat orb fill + entrance animation */
+.stst-orb {
+  background: linear-gradient(160deg, #1e1813, #100d0a 78%);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: stst-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stst-orb-top {
+  animation-delay: 0.05s;
+}
+
+.stst-orb-bottom {
+  animation-delay: 0.22s;
+}
+
+@keyframes stst-rise {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulsing glow dot */
+.stst-dot {
+  animation: stst-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes stst-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stst-orb {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .stst-dot {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #ffb648;
+  outline-offset: 3px;
+}

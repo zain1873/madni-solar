@@ -184,17 +184,33 @@ const Navbar = () => {
   // Holds the current search input value
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Listen to scroll position to hide/show the top bar
+  // Listen to scroll position to hide/show the top bar.
+  // Throttled via requestAnimationFrame and guarded with a small
+  // hysteresis band so tiny thumb jitter near the top doesn't flicker.
   useEffect(() => {
+    const THRESHOLD = 10; // scroll down past this to hide the top bar
+    const RESTORE = 2;    // scroll back up below this to show it again
+
+    let rafId = null;
+
     const handleScroll = () => {
-      // If user has scrolled down more than 10px, hide the top bar
-      setIsScrolled(window.scrollY > 10);
+      if (rafId !== null) return; // already queued for this frame
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        const y = window.scrollY;
+        setIsScrolled((prev) => {
+          if (y > THRESHOLD) return true;
+          if (y < RESTORE) return false;
+          return prev; // inside the dead-zone: keep current state, no re-render
+        });
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the listener when component unmounts
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // Close the search overlay when the Escape key is pressed

@@ -2,6 +2,9 @@
 .navbar-wrapper {
   width: 100%;
   font-family: "Segoe UI", Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* ===== Top Bar ===== */
@@ -10,7 +13,7 @@
   color: var(--white);
   font-size: 14px;
   padding: 12px 20px;
-  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.15s ease, opacity 0.15s ease, padding 0.15s ease;
   max-height: 60px;
   overflow: hidden;
   opacity: 1;
@@ -69,10 +72,7 @@
 .main-nav {
   background-color: var(--white);
   box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.15s ease;
 }
 
 .main-nav-scrolled {
@@ -350,7 +350,7 @@
 }
 
 .calculator-btn:hover {
-  background-color: var(--orange-dark);
+  background-color: red;
 }
 
 .cart-btn {
