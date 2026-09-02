@@ -178,6 +178,12 @@ const Navbar = () => {
   // Tracks whether the mobile menu is open
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Tracks whether the search overlay is open
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Holds the current search input value
+  const [searchQuery, setSearchQuery] = useState("");
+
   // Listen to scroll position to hide/show the top bar
   useEffect(() => {
     const handleScroll = () => {
@@ -190,6 +196,16 @@ const Navbar = () => {
     // Clean up the listener when component unmounts
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close the search overlay when the Escape key is pressed
+  useEffect(() => {
+    if (!isSearchOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setIsSearchOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isSearchOpen]);
 
   // Toggles a dropdown menu open/closed (used on mobile tap)
   const toggleMenu = (menuName) => {
@@ -312,7 +328,13 @@ const Navbar = () => {
 
           {/* Right side actions */}
           <div className="nav-actions flex items-center">
-            <button className="icon-btn" aria-label="Search"><FaSearch /></button>
+            <button
+              className="icon-btn"
+              aria-label="Search"
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+            >
+              <FaSearch />
+            </button>
             <button className="calculator-btn">CALCULATOR</button>
             <button className="cart-btn">
               <span className="cart-price">Rs0.00</span>
@@ -421,6 +443,29 @@ const Navbar = () => {
           </ul>
         )}
       </nav>
+
+      {/* Search overlay - slides down below the navbar */}
+      <div className={`search-overlay ${isSearchOpen ? "search-overlay-open" : ""}`}>
+        <div className="search-overlay-inner">
+          <button
+            className="search-close-btn"
+            aria-label="Close search"
+            onClick={() => setIsSearchOpen(false)}
+          >
+            <FaTimes />
+          </button>
+          <div className="search-input-wrap">
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Searching..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <FaSearch className="search-input-icon" />
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
