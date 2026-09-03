@@ -523,14 +523,34 @@
 
 /* ===== Responsive Media Queries ===== */
 
-/* Tablets */
-@media (max-width: 1024px) {
+/* Large laptops */
+@media (max-width: 1400px) {
   .nav-menu {
-    gap: 16px;
+    gap: 18px;
   }
 
   .nav-link {
     font-size: 14px;
+  }
+}
+
+/* Small laptops / large tablets */
+@media (max-width: 1250px) {
+  .nav-menu {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .calculator-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .cart-btn {
+    padding: 6px 10px;
   }
 
   .dropdown-wide {
@@ -555,8 +575,8 @@
   }
 }
 
-/* Small tablets / large phones */
-@media (max-width: 860px) {
+/* Tablets — switch to hamburger here instead of fighting for space */
+@media (max-width: 1100px) {
   .nav-menu {
     display: none;
   }
@@ -565,17 +585,24 @@
     display: inline-flex;
   }
 
-  .calculator-btn {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
   .top-bar-left {
     gap: 14px;
   }
 
   .top-bar-right {
     display: none;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 860px) {
+  .calculator-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .main-nav-inner {
+    gap: 10px;
   }
 }
 

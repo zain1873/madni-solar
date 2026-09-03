@@ -171,6 +171,12 @@
     flex-direction: column;
     min-height: auto;
   }
+  .showcase__overlay-image {
+    display: none;
+  }
+  .showcase {
+    padding: 30px 0;
+  }
 
   .showcase__content {
     width: 100%;

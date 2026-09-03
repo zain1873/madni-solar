@@ -505,10 +505,6 @@
 }
 
 @media (max-width: 768px) {
-  .page-banner {
-    min-height: auto;
-  }
-
   .page-banner-content {
     padding: 60px 20px;
   }
