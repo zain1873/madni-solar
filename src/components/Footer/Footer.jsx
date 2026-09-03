@@ -9,15 +9,23 @@ import {
   FaTiktok,
 } from "react-icons/fa6";
 import { HiArrowRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 // Simple reusable link item with an arrow icon
-function FooterLink({ text }) {
+function FooterLink({ text, to }) {
   return (
     <li className="footer-link-item">
-      <a href="#">
-        <HiArrowRight className="footer-arrow-icon" />
-        <span>{text}</span>
-      </a>
+      {to ? (
+        <Link to={to}>
+          <HiArrowRight className="footer-arrow-icon" />
+          <span>{text}</span>
+        </Link>
+      ) : (
+        <a href="#">
+          <HiArrowRight className="footer-arrow-icon" />
+          <span>{text}</span>
+        </a>
+      )}
     </li>
   );
 }
@@ -64,11 +72,11 @@ function Footer() {
         <div className="footer-column">
           <h3 className="footer-heading">Useful Links</h3>
           <ul className="flex flex-col gap-3">
-            <FooterLink text="About Us" />
+            <FooterLink text="About Us" to = "/about" />
             <FooterLink text="Projects" />
             <FooterLink text="Products" />
             <FooterLink text="Our Services" />
-            <FooterLink text="Our Team" />
+            <FooterLink text="Our Team" to="/team" />
             <FooterLink text="Sun Electronics" />
           </ul>
         </div>
@@ -77,12 +85,12 @@ function Footer() {
         <div className="footer-column">
           <h3 className="footer-heading">Help &amp; Legal</h3>
           <ul className="flex flex-col gap-3">
-            <FooterLink text="Contact" />
-            <FooterLink text="FAQ" />
+            <FooterLink text="Contact" to="/contact" />
+            <FooterLink text="FAQ"  to="/Faqs" />
             <FooterLink text="Blog" />
-            <FooterLink text="Privacy Policy" />
-            <FooterLink text="Terms And Conditions" />
-            <FooterLink text="Refund Policy" />
+            <FooterLink text="Privacy Policy" to= "/privacy-policy" />
+            <FooterLink text="Terms And Conditions" to="/terms-and-conditions" />
+            <FooterLink text="Refund Policy" to="/refund-policy" />
           </ul>
         </div>
 

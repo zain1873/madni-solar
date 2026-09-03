@@ -85,7 +85,9 @@ function SolarServices() {
 
         {/* View all button */}
         <div className="view-all-wrapper flex justify-center">
+          <a href="/services">
           <button className="view-all-btn">View All Services</button>
+          </a>
         </div>
       </div>
     </section>

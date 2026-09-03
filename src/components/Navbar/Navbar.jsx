@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/project-logo.png";
+import { Link } from "react-router-dom";
 
 // Professional icon set from react-icons (install: npm i react-icons)
 import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaTiktok, FaSearch, FaShoppingCart, FaBars, FaTimes, FaChevronDown, FaSun } from "react-icons/fa";
@@ -10,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 // Plain strings are simple links. Objects { name, sub } have a nested sub-list.
 // This mirrors the multi-column mega menus shown in the real site.
 
-const aboutMenu = ["Contact", "Policy Trading", "Our Team", "Careers"];
+const aboutMenu = ["About", "Contact", "Policy Trading", "Our Team", "Careers"];
 
 const solarPanelsMenu = [
   "Yingli", "Aiko Solar", "Astronergy", "Huasun", "Hanersun", "Canadian",
@@ -272,7 +273,15 @@ const Navbar = () => {
                 <ul className="dropdown">
                   {aboutMenu.map((item) => (
                     <li key={item}>
-                      <a href="#">{item}</a>
+                      {item === "About" ? (
+                        <Link to="/about">{item}</Link>
+                      ) : item === "Contact" ? (
+                        <Link to="/contact">{item}</Link>
+                      ) : item === "Our Team" ? (
+                        <Link to="/team">{item}</Link>
+                      ) : (
+                        <a href="#">{item}</a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -332,6 +341,12 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
+              <Link to="/contact" className="nav-link">Contact</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/services" className="nav-link">Services</Link>
+            </li>
+            <li className="nav-item">
               <a href="#" className="nav-link">Projects</a>
             </li>
             <li className="nav-item">
@@ -380,7 +395,17 @@ const Navbar = () => {
               {openMenu === "about" && (
                 <ul className="mobile-dropdown">
                   {aboutMenu.map((item) => (
-                    <li key={item}><a href="#">{item}</a></li>
+                    <li key={item}>
+                      {item === "About" ? (
+                        <Link to="/about">{item}</Link>
+                      ) : item === "Contact" ? (
+                        <Link to="/contact">{item}</Link>
+                      ) : item === "Our Team" ? (
+                        <Link to="/team">{item}</Link>
+                      ) : (
+                        <a href="#">{item}</a>
+                      )}
+                    </li>
                   ))}
                 </ul>
               )}
@@ -453,6 +478,8 @@ const Navbar = () => {
           )}
         </li>
 
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/services">Services</Link></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Orders</a></li>
             <li><a href="#">Request a Quote (Beta)</a></li>

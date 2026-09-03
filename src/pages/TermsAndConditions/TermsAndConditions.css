@@ -1,0 +1,72 @@
+/* ===== Section wrapper ===== */
+.terms-section {
+  background-color: #ffffff;
+  padding: 70px 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* ===== Each policy item ===== */
+.terms-item {
+  margin-bottom: 34px;
+}
+
+.terms-item:last-child {
+  margin-bottom: 0;
+}
+
+.terms-heading {
+  color: #111111;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.terms-text {
+  color: #555555;
+  font-size: 15.5px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ===== Responsive design (media queries only) ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .terms-section {
+    padding: 50px 0;
+  }
+
+  .terms-heading {
+    font-size: 19px;
+  }
+
+  .terms-text {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .terms-section {
+    padding: 40px 0;
+  }
+
+  .terms-item {
+    margin-bottom: 26px;
+  }
+
+  .terms-heading {
+    font-size: 18px;
+  }
+
+  .terms-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
