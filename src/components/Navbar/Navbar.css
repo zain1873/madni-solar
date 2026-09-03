@@ -139,7 +139,7 @@
 
 /* Highlight the active/hovered item like "Solar Panels" in screenshot */
 .has-dropdown:hover .nav-link {
-  color: var(--navy);
+   color: var(--orange-dark);
 }
 
 /* ===== Simple Dropdown (About) ===== */

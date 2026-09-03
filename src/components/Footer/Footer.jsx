@@ -120,7 +120,7 @@ function Footer() {
       {/* Bottom bar */}
       <div className="footer-bottom">
         <div className="container flex flex-wrap justify-between gap-2">
-          <p>Copyright © Sun Solar LLP 2026 All Rights Reserved.</p>
+          <p>Copyright © Madni Solar LLP 2026 All Rights Reserved.</p>
           <p>
             Made by{" "}
             <a

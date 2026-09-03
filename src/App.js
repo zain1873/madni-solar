@@ -9,6 +9,9 @@ import RefundPolicy from './pages/RefundPolicy/RefundPolicy';
 import AboutPage from './pages/AboutPage/AboutPage';
 import TeamPage from './pages/TeamPage/TeamPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+
+
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/our-projects" element={<ProjectsPage />} />
       </Routes>
     </Router>
   );

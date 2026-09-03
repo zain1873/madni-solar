@@ -347,7 +347,7 @@ const Navbar = () => {
               <Link to="/services" className="nav-link">Services</Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">Projects</a>
+              <a href="/our-projects" className="nav-link">Projects</a>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link">Orders</a>
@@ -480,7 +480,7 @@ const Navbar = () => {
 
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><a href="#">Projects</a></li>
+            <li><Link to="/our-projects">Projects</Link></li>
             <li><a href="#">Orders</a></li>
             <li><a href="#">Request a Quote (Beta)</a></li>
           </ul>

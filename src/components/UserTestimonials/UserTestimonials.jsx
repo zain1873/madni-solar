@@ -72,7 +72,7 @@ function Testimonials() {
         <div className="testimonials-content-col">
           {/* Small tag above heading */}
           <div className="testimonials-tag flex">
-            <span className="testimonials-tag-highlight">Sun Solar</span>
+            <span className="testimonials-tag-highlight">Madni Solar</span>
             <span className="testimonials-tag-plain">Testimonials</span>
           </div>
 

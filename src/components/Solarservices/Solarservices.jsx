@@ -37,7 +37,7 @@ function SolarServices() {
       icon: <FaHandHoldingUsd />,
       title: "Solar Installments — Through Banks",
       description:
-        "Sun Solar does not offer direct financing. Bank approval and terms apply.",
+        "Madni Solar does not offer direct financing. Bank approval and terms apply.",
     },
   ];
 
