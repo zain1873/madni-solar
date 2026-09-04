@@ -109,11 +109,11 @@ export default function SolarTrustSection() {
           </h1>
 
           <p className="border-l-2 border-[#fff]/40 pl-5 text-[1.1rem] lg:text-[1.15rem] leading-relaxed text-[#d9d3c8] max-w-[46ch]">
-            "SunSolar is very reliable brand in Pakistan. I received
+            "madni solar is very reliable brand in Pakistan. I received
             excellent customer service from them. Highly recommended."
           </p>
           <p className="text-sm text-[#6f6a63] -mt-4">
-            — Verified SunSolar customer
+            — Verified madni solar customer
           </p>
 
           <div className="flex items-center gap-3 mt-1">

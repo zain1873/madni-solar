@@ -66,7 +66,7 @@ function ContactPage() {
             <div className="contact-card">
               <span className="contact-card-icon"><FaEnvelope /></span>
               <h3 className="contact-card-title">Email Us</h3>
-              <p className="contact-card-value">info@sunsolar.pk</p>
+              <p className="contact-card-value">info@madni solar.pk</p>
               <p className="contact-card-label">We reply within 24 hours</p>
             </div>
             <div className="contact-card">
@@ -177,7 +177,7 @@ function ContactPage() {
 
               <div className="map-box">
           <iframe
-            title="SunSolar Location Map"
+            title="madni solar Location Map"
             src={`https://www.google.com/maps?q=${encodeURIComponent(mapQueryAddress)}&output=embed`}
             width="100%"
             height="100%"
@@ -192,7 +192,7 @@ function ContactPage() {
                     <FaMapMarkerAlt />
                   </span>
                   <div className="map-info-text">
-                    <p className="map-info-title">SunSolar Office</p>
+                    <p className="map-info-title">madni solar Office</p>
                     <p className="map-info-address">{officeAddress}</p>
                   </div>
                   <a

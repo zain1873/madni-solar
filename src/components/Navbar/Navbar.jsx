@@ -11,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 // Plain strings are simple links. Objects { name, sub } have a nested sub-list.
 // This mirrors the multi-column mega menus shown in the real site.
 
-const aboutMenu = ["About", "Contact", "Policy Trading", "Our Team", "Careers"];
+const aboutMenu = ["About", "Policy Trading", "Our Team", "Careers"];
 
 const solarPanelsMenu = [
   "Yingli", "Aiko Solar", "Astronergy", "Huasun", "Hanersun", "Canadian",
@@ -238,8 +238,8 @@ const Navbar = () => {
             <a href="tel:+923111666677" className="top-bar-link">
               <FaPhoneAlt className="top-bar-icon" /> +923 111 666 677
             </a>
-            <a href="mailto:info@sunsolar.pk" className="top-bar-link">
-              <FaEnvelope className="top-bar-icon" /> info@sunsolar.pk
+            <a href="mailto:info@madni solar.pk" className="top-bar-link">
+              <FaEnvelope className="top-bar-icon" /> info@madni solar.pk
             </a>
           </div>
           <div className="top-bar-right flex items-center">
@@ -258,7 +258,7 @@ const Navbar = () => {
         <div className="container main-nav-inner flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="logo-link">
-            <img src={logo} alt="SunSolar Logo" className="logo-image" />
+            <img src={logo} alt="madni solar Logo" className="logo-image" />
           </a>
 
           {/* Desktop menu */}
@@ -279,6 +279,8 @@ const Navbar = () => {
                         <Link to="/contact">{item}</Link>
                       ) : item === "Our Team" ? (
                         <Link to="/team">{item}</Link>
+                      ) : item === "Careers" ? (
+                        <Link to="/careers">{item}</Link>
                       ) : (
                         <a href="#">{item}</a>
                       )}
@@ -343,17 +345,15 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="/contact" className="nav-link">Contact</Link>
             </li>
-            <li className="nav-item">
-              <Link to="/services" className="nav-link">Services</Link>
-            </li>
+
             <li className="nav-item">
               <a href="/our-projects" className="nav-link">Projects</a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">Orders</a>
+              <a href="/orders" className="nav-link">Orders</a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">Request a Quote (Beta)</a>
+              <a href="/request-quote" className="nav-link">Request a Quote (Beta)</a>
             </li>
           </ul>
 
@@ -402,6 +402,8 @@ const Navbar = () => {
                         <Link to="/contact">{item}</Link>
                       ) : item === "Our Team" ? (
                         <Link to="/team">{item}</Link>
+                      ) : item === "Careers" ? (
+                        <Link to="/careers">{item}</Link>
                       ) : (
                         <a href="#">{item}</a>
                       )}
@@ -479,10 +481,12 @@ const Navbar = () => {
         </li>
 
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/services">Services</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/our-projects">Projects</Link></li>
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Request a Quote (Beta)</a></li>
+            <li><Link to="/orders">Orders</Link></li>
+            <li><Link to="/request-quote">Request a Quote (Beta)</Link></li>
           </ul>
         )}
       </nav>

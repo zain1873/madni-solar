@@ -22,7 +22,7 @@ function MeetOurTeam() {
     {
       image: team1,
       name: "Rehman Shahid",
-      role: "CEO SunSolar",
+      role: "CEO madni solar",
     },
     {
       image: team2,

@@ -27,7 +27,7 @@ function EquipmentTrading() {
       <div className="container-equipment">
         {/* Small tag above heading */}
         <div className="equipment-tag flex justify-center">
-          <span className="equipment-tag-highlight">SunSolar</span>
+          <span className="equipment-tag-highlight">madni solar</span>
           <span className="equipment-tag-plain">Equipment</span>
         </div>
 

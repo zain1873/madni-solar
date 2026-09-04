@@ -35,7 +35,7 @@ function Testimonials() {
       name: "Usman Raza",
       location: "Karachi, Pakistan",
       message:
-        "Reliable products and honest pricing. Very happy with the whole SunSolar team.",
+        "Reliable products and honest pricing. Very happy with the whole madni solar team.",
     },
   ];
 
@@ -84,7 +84,7 @@ function Testimonials() {
           {/* Slider card - shows one testimonial at a time */}
           <div className="testimonial-card">
             <div className="testimonial-top flex items-center">
-              <img src={logo} alt="SunSolar Logo" className="testimonial-logo" />
+              <img src={logo} alt="madni solar Logo" className="testimonial-logo" />
               <div className="testimonial-person">
                 <h3 className="testimonial-name">{activeTestimonial.name}</h3>
                 <p className="testimonial-location">

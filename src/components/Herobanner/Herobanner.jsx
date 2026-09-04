@@ -30,7 +30,7 @@ function HeroBanner() {
 
       <div className="container hero-content">
         {/* Small welcome text */}
-        <p className="hero-welcome">Welcome to SUNSOLAR</p>
+        <p className="hero-welcome">Welcome to madni solar</p>
 
         {/* Price ticker row */}
         <div className="ticker-row flex">
@@ -64,7 +64,7 @@ function HeroBanner() {
 
         {/* Description */}
         <p className="hero-description">
-          SunSolar supplies reliable solar products and installation services
+          madni solar supplies reliable solar products and installation services
           for homes, businesses, industries and farms across Pakistan.
         </p>
 

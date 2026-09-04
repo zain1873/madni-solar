@@ -8,7 +8,7 @@ function AboutCompany() {
       id: "who-we-are",
       label: "Who we are",
       description:
-        "SunSolar is a Pakistan-based solar products and System Installation Service provider. We supply solar panels, inverters, lithium batteries and related equipment for residential, commercial, industrial and agricultural applications. Our services include consultation, system design, equipment supply, installation, grid-connection support and after-sales assistance.",
+        "madni solar is a Pakistan-based solar products and System Installation Service provider. We supply solar panels, inverters, lithium batteries and related equipment for residential, commercial, industrial and agricultural applications. Our services include consultation, system design, equipment supply, installation, grid-connection support and after-sales assistance.",
       points: [
         "Tier-1 Panels",
         "Premium Inverters",

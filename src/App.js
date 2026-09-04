@@ -10,9 +10,12 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import TeamPage from './pages/TeamPage/TeamPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
-
-
+import LoginRegister from './pages/Loginregister/Loginregister';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import SendRequest from './pages/RequestQuote/RequestQuote';
+import ProductsPage from './pages/ProductsPage/ProductsPage';
+import Career from './pages/CareerPage/Career';
+import BlogPage from './pages/BlogPage/Blog';
 
 function App() {
   return (
@@ -29,6 +32,11 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/our-projects" element={<ProjectsPage />} />
+        <Route path="/orders" element={<LoginRegister />} />
+        <Route path="/request-quote" element={<SendRequest />} />
+        <Route path="/our-products" element={<ProductsPage />} />
+        <Route path="/careers" element={<Career />} />
+        <Route path="/blog" element={<BlogPage />} />
       </Routes>
     </Router>
   );

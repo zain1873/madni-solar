@@ -73,11 +73,11 @@ function Footer() {
           <h3 className="footer-heading">Useful Links</h3>
           <ul className="flex flex-col gap-3">
             <FooterLink text="About Us" to = "/about" />
-            <FooterLink text="Projects" />
-            <FooterLink text="Products" />
-            <FooterLink text="Our Services" />
+            <FooterLink text="Projects"to = "/our-projects" />
+            <FooterLink text="Products" to = "/our-products" />
+            <FooterLink text="Our Services" to = "/services" />
             <FooterLink text="Our Team" to="/team" />
-            <FooterLink text="Sun Electronics" />
+            {/* <FooterLink text="Sun Electronics" /> */}
           </ul>
         </div>
 
@@ -87,7 +87,7 @@ function Footer() {
           <ul className="flex flex-col gap-3">
             <FooterLink text="Contact" to="/contact" />
             <FooterLink text="FAQ"  to="/Faqs" />
-            <FooterLink text="Blog" />
+            <FooterLink text="Blog" to="/blog" />
             <FooterLink text="Privacy Policy" to= "/privacy-policy" />
             <FooterLink text="Terms And Conditions" to="/terms-and-conditions" />
             <FooterLink text="Refund Policy" to="/refund-policy" />

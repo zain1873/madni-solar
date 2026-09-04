@@ -12,7 +12,7 @@ const projects = [
     title: "Al-Fateh Cold Store Faisalabad (180kW Ongrid System)",
     description: (
       <>
-        SUNSOLAR successfully designed and installed a{" "}
+        madni solar successfully designed and installed a{" "}
         <strong>180kW on-grid solar system</strong> for{" "}
         <strong>Al-Fateh Cold Store in Faisalabad</strong>. This
         high-performance solar solution provides a reliable, cost-effective,
@@ -40,7 +40,7 @@ const projects = [
     title: "Green Valley Textiles Lahore (250kW Ongrid System)",
     description: (
       <>
-        SUNSOLAR successfully designed and installed a{" "}
+        madni solar successfully designed and installed a{" "}
         <strong>250kW on-grid solar system</strong> for{" "}
         <strong>Green Valley Textiles in Lahore</strong>. This
         high-performance solar solution provides a reliable, cost-effective,
@@ -68,7 +68,7 @@ const projects = [
     title: "City Mall Multan (120kW Ongrid System)",
     description: (
       <>
-        SUNSOLAR successfully designed and installed a{" "}
+        madni solar successfully designed and installed a{" "}
         <strong>120kW on-grid solar system</strong> for{" "}
         <strong>City Mall in Multan</strong>. This high-performance solar
         solution provides a reliable, cost-effective, and sustainable power

@@ -30,13 +30,13 @@ function ContactInfoBar() {
 
 
         {/* Contact details */}
-        <div className="contact-details flex items-center flex-wrap gap-8">
+        <div className="contact-details flex items-center flex-wrap gap-5">
           <ContactItem icon={<FaPhoneAlt />} label="Phone Number" href="tel:+923111666677">
             +923 111 666 677
           </ContactItem>
 
-          <ContactItem icon={<FaEnvelope />} label="Email Us Here" href="mailto:info@sunsolar.pk">
-            info@sunsolar.pk
+          <ContactItem icon={<FaEnvelope />} label="Email Us Here" href="mailto:info@madni solar.pk">
+            info@madni solar.pk
           </ContactItem>
 
           <ContactItem
