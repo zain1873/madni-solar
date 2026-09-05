@@ -16,6 +16,8 @@ import SendRequest from './pages/RequestQuote/RequestQuote';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import Career from './pages/CareerPage/Career';
 import BlogPage from './pages/BlogPage/Blog';
+import SolarPanelBrandPage from "./pages/SolarPanelBrandPage/SolarPanelBrandPage";
+
 
 function App() {
   return (
@@ -37,7 +39,7 @@ function App() {
         <Route path="/our-products" element={<ProductsPage />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/blog" element={<BlogPage />} />
-      </Routes>
+        <Route path="/solar-panels/:brandSlug" element={<SolarPanelBrandPage />} /> </Routes>
     </Router>
   );
 }

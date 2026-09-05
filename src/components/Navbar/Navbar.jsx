@@ -133,6 +133,7 @@ const otherProductsMenu = [
   },
 ];
 
+const slugify = (name) => name.toLowerCase().trim().replace(/\s+/g, "-");
 // Recursively renders a list of items, supporting one or two levels of nesting
 const renderItems = (items, keyPrefix) =>
   items.map((item, index) => {
@@ -301,14 +302,15 @@ const Navbar = () => {
                   <div className="dropdown-columns">
                     {solarPanelsMenu.map((item) => (
                       <li key={item}>
-                        <a href="#"><FaSun className="bullet-icon" /> {item}</a>
+                        <Link to={`/solar-panels/${slugify(item)}`}>
+                          <FaSun className="bullet-icon" /> {item}
+                        </Link>
                       </li>
                     ))}
                   </div>
                 </ul>
               )}
             </li>
-
             <li
               className="nav-item has-dropdown"
               onMouseEnter={() => setOpenMenu("inverters")}
@@ -422,7 +424,12 @@ const Navbar = () => {
               <ul className="mobile-dropdown">
                 {solarPanelsMenu.map((item) => (
                   <li key={item}>
-                    <a href="#"><FaSun className="bullet-icon" /> {item}</a>
+                    <Link
+                      to={`/solar-panels/${slugify(item)}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <FaSun className="bullet-icon" /> {item}
+                    </Link>
                   </li>
                 ))}
               </ul>

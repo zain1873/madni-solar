@@ -1,0 +1,35 @@
+.brand-content {
+  padding: 50px 40px;
+}
+
+.brand-content-title {
+  color: #0f3057;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.brand-content-description {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.brand-not-found {
+  padding: 80px 20px;
+  text-align: center;
+  color: #666666;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .brand-content {
+    padding: 30px 20px;
+  }
+
+  .brand-content-title {
+    font-size: 22px;
+  }
+}
